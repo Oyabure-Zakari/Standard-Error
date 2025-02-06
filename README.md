@@ -27,7 +27,6 @@ const noOfTreatment = values.length;
 
 // Calculate the mean
 const mean = values.reduce((acc, cur) => acc + cur, 0) / noOfTreatment;
-console.log("mean = ", mean);
 
 // Calculate each (Xi - mean)
 const a = values[0] - mean;
@@ -55,15 +54,9 @@ const standardDeviation = Math.sqrt(variance).toFixed(2);
 // Compute standard error (SE)
 const rootOfNumnberOfTreatment = Math.sqrt(noOfTreatment);
 const SE = standardDeviation / rootOfNumnberOfTreatment;
-console.log("standard error", SE);
 
+// Multiply standard error by two
 const multipySE = SE * 2;
-console.log("multipy standard error = ", multipySE);
-Example Output
-JavaScript
-mean =  12.6
-standard error 0.21
-multipy standard error =  0.42
 
 ## License
 This project is licensed under the MIT License.
