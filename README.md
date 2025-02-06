@@ -19,43 +19,43 @@ HTML
 <script src="path/to/standardError.js"></script>
 
 ## Use the provided code to calculate the standard error:
-// Input values
+// Input values <br>
 const values = [13, 12.8, 12.6, 12];
 
-// Number of treatments
+// Number of treatments <br>
 const noOfTreatment = values.length;
 
-// Calculate the mean
+// Calculate the mean <br>
 const mean = values.reduce((acc, cur) => acc + cur, 0) / noOfTreatment;
 
-// Calculate each (Xi - mean)
+// Calculate each (Xi - mean) <br>
 const a = values[0] - mean;
 const b = values[1] - mean;
 const c = values[2] - mean;
 const d = values[3] - mean;
 
-// Square each difference
-const aSquare = Math.pow(a, 2);
-const bSquare = Math.pow(b, 2);
-const cSquare = Math.pow(c, 2);
-const dSquare = Math.pow(d, 2);
+// Square each difference <br>
+const aSquare = Math.pow(a, 2); <br>
+const bSquare = Math.pow(b, 2); <br>
+const cSquare = Math.pow(c, 2); <br>
+const dSquare = Math.pow(d, 2); <br>
 
-// Sum of squares
+// Sum of squares <br>
 const sumOfSquares = [aSquare, bSquare, cSquare, dSquare]
   .map((value) => Number(value))
   .reduce((acc, cur) => acc + cur, 0);
 
-// Variance
+// Variance <br>
 const variance = sumOfSquares / noOfTreatment;
 
-// Compute standard deviation (S)
+// Compute standard deviation (S) <br>
 const standardDeviation = Math.sqrt(variance).toFixed(2);
 
-// Compute standard error (SE)
-const rootOfNumnberOfTreatment = Math.sqrt(noOfTreatment);
-const SE = standardDeviation / rootOfNumnberOfTreatment;
+// Compute standard error (SE) <br>
+const rootOfNumnberOfTreatment = Math.sqrt(noOfTreatment); <br>
+const SE = standardDeviation / rootOfNumnberOfTreatment; <br>
 
-// Multiply standard error by two
+// Multiply standard error by two <br>
 const multipySE = SE * 2;
 
 ## License
