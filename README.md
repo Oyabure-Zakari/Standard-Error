@@ -29,10 +29,10 @@ const noOfTreatment = values.length;
 const mean = values.reduce((acc, cur) => acc + cur, 0) / noOfTreatment;
 
 // Calculate each (Xi - mean) <br>
-const a = values[0] - mean;
-const b = values[1] - mean;
-const c = values[2] - mean;
-const d = values[3] - mean;
+const a = values[0] - mean; <br>
+const b = values[1] - mean; <br>
+const c = values[2] - mean; <br>
+const d = values[3] - mean; <br>
 
 // Square each difference <br>
 const aSquare = Math.pow(a, 2); <br>
